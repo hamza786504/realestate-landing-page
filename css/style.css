@@ -1,0 +1,35 @@
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  box-sizing: border-box;
+  user-select: none;
+}
+:root {
+  
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("/font/Avenir\ Next.ttf");
+}
+* {
+  font-family: "Avenir";
+}
+html,
+body {
+  overflow-x: none;
+}
+a {
+  color: inherit;
+}
+a,
+a:hover {
+  text-decoration: none;
+}
+
+/* bootstrap breakpoints media queries */
+@media screen and (min-width: 576px){}
+@media screen and (min-width: 768px){}
+@media screen and (min-width: 992px){}
+@media screen and (min-width: 1200px){}
+@media screen and (min-width: 1400px){}
