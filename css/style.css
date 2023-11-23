@@ -30,6 +30,7 @@
 }
 * {
   font-family: "Avenir-normal";
+  outline: none !important;
 }
 html,
 body {
@@ -47,7 +48,7 @@ a:hover {
 }
 
 
-.header{
+.header , .footer{
   box-shadow: 0 0 1px 0 #D9D9D9;
 }
 .header img{
@@ -190,12 +191,62 @@ a:hover {
   width: 100%;
   background-color: white;
   border-radius: 8px;
-  padding: 50px 20px;
+  padding: 40px 20px 30px;
+}
+.option .form_cover label{
+  font-family: "Avenir-normal";
 }
 .option .form_cover h4{
   font-weight: 500;
   font-family: "Avenir-bold";
 }
+.option .form_cover input , .option .form_cover textarea{
+  border: 1px solid #C6C6C6;
+  border-radius: 2px;
+  color: var(--dark-gray);
+}
+.form-control:focus{
+  box-shadow: none !important;
+}
+.option .form_cover input[type="submit"]{
+  background-color: var(--blue);
+}
+
+
+
+
+
+
+
+.available-place{
+  width: 200px; aspect-ratio: 1/1;
+}
+
+.item{
+  width: 200px;
+}
+
+
+
+.footer ul{
+  list-style: none;
+  margin: 0 auto;
+}
+.footer ul li{
+  border-right: 2px solid var(--dark-gray);
+  padding: 0 13px;
+  margin-top: 15px !important;
+}
+.footer ul li:last-child{
+  border-right: none;
+  padding: 0 0 0 13px;
+}
+.footer ul li a{
+  font-size: 16px;
+}
+
+
+
 
 
 
@@ -211,6 +262,9 @@ a:hover {
   }
   .process h2{
     font-size: 2.3rem;
+  }
+  .footer ul li a{
+    font-size: 20px;
   }
 }
 @media screen and (min-width: 992px){}
