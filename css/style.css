@@ -54,6 +54,9 @@ a:hover {
 .header img{
   width: 50px;
 }
+.error {
+  color: red;
+}
 
 
 
@@ -87,7 +90,7 @@ a:hover {
 .banner p{
   font-size: 25px;
 }
-#email_address_form input[type="email"]{
+#email_address_form input[type="email"] , #newsletter_form input[type="email"]{
   background-color: transparent;
   padding: 0.7rem 0.8rem;
   border: 1px solid var(--light-black) !important;
@@ -95,7 +98,7 @@ a:hover {
   color: var(--light-black) !important;
   flex-grow: 1;
 }
-#email_address_form input[type="submit"]{
+#email_address_form input[type="submit"] , #newsletter_form input[type="submit"]{
   background-color: var(--blue);
   padding: 0.7rem 0.8rem;
   border: 1px solid var(--blue);
@@ -257,9 +260,6 @@ a:hover {
 /* bootstrap breakpoints media queries */
 @media screen and (min-width: 576px){}
 @media screen and (min-width: 768px){
-  .w-md-auto{
-    width: auto !important;
-  }
   .process h2{
     font-size: 2.3rem;
   }
@@ -267,7 +267,11 @@ a:hover {
     font-size: 20px;
   }
 }
-@media screen and (min-width: 992px){}
+@media screen and (min-width: 992px){
+  .w-lg-auto{
+    width: auto !important;
+  }
+}
 @media screen and (min-width: 1200px){
   .process h2{
     font-size: 2.8rem;

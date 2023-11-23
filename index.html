@@ -40,8 +40,8 @@
     </header>
     <section class="banner">
       <div class="container">
-        <div class="row align-items-center justify-content-center pt-5 pt-md-0">
-          <div class="col-md-7 px-3 px-md-2 text-start mt-5 mt-md-0">
+        <div class="row align-items-center justify-content-center pt-5 pt-lg-0">
+          <div class="col-lg-7 px-3 px-lg-2 text-start mt-5 mt-lg-0">
             <h1 class="text-white">Looking To Rent A Place Soon?</h1>
             <span style="color: var(--light-pink)">No Agent Fees.</span><br />
             <span style="color: var(--light-sky)">No Legal Fees.</span><br />
@@ -51,28 +51,29 @@
             </p>
             <div class="row">
               <div class="col-12 col-lg-10">
-                <form id="email_address_form">
+                <form id="email_address_form"  onsubmit="return validateBannerForm()">
                   <div
-                    class="d-flex flex-wrap flex-md-nowrap flex-col flex-md-row align-items-center justify-content-start"
+                    class="d-flex flex-wrap flex-lg-nowrap flex-col flex-lg-row align-items-center justify-content-start"
                   >
                     <input
                       type="email"
                       name="email"
-                      id="email_address"
-                      class="me-md-2 me-0 w-100 flex-md-1"
+                      id="banner_email"
+                      class="me-lg-2 me-0 w-100 flex-lg-1"
                       placeholder="Enter Your Email Address"
                     />
                     <input
-                      type="submit"
-                      value="Join The Waitlist"
-                      class="w-100 w-md-auto mt-3 mt-md-0"
+                    type="submit"
+                    value="Join The Waitlist"
+                    class="w-100 w-lg-auto mt-3 mt-lg-0"
                     />
                   </div>
+                  <p id="bannerEmailError" class="error"></p>
                 </form>
               </div>
             </div>
           </div>
-          <div class="col-md-5 mt-4 mt-md-0 text-center text-md-end">
+          <div class="col-lg-5 mt-4 mt-lg-0 text-center text-lg-end">
             <img src="images/banner.png" alt="banner" class="banner-image" />
           </div>
         </div>
@@ -105,7 +106,7 @@
             class="row justify-content-between gallery-item content1 active"
           >
             <div
-              class="col-md-4 col-lg-3 text-center d-flex justify-content-center justify-content-lg-start"
+              class="col-lg-3 col-md-4 mb-4 text-center d-flex justify-content-center justify-content-lg-start"
             >
               <div
                 class="d-flex flex-column items-center"
@@ -124,7 +125,7 @@
               </div>
             </div>
             <div
-              class="col-md-4 col-lg-3 text-center d-flex justify-content-center"
+              class="col-lg-3 col-md-4 mb-4 text-center d-flex justify-content-center"
             >
               <div
                 class="d-flex flex-column items-center"
@@ -144,7 +145,7 @@
               </div>
             </div>
             <div
-              class="col-md-4 col-lg-3 text-center d-flex justify-content-center justify-content-lg-end"
+              class="col-lg-3 col-md-4 mb-4 text-center d-flex justify-content-center justify-content-lg-end"
             >
               <div
                 class="d-flex flex-column items-center"
@@ -168,7 +169,7 @@
             class="row justify-content-between gallery-item content2"
           >
             <div
-              class="col-md-4 col-lg-3 text-center d-flex justify-content-lg-start justify-content-center"
+              class="col-lg-3 col-md-4 mb-4 text-center d-flex justify-content-lg-start justify-content-center"
             >
               <div
                 class="d-flex flex-column items-center"
@@ -187,7 +188,7 @@
               </div>
             </div>
             <div
-              class="col-md-4 col-lg-3 text-center d-flex justify-content-center"
+              class="col-lg-3 col-md-4 mb-4 text-center d-flex justify-content-center"
             >
               <div
                 class="d-flex flex-column items-center"
@@ -206,7 +207,7 @@
               </div>
             </div>
             <div
-              class="col-md-4 col-lg-3 text-center d-flex justify-content-center justify-content-lg-end"
+              class="col-lg-3 col-md-4 mb-4 text-center d-flex justify-content-center justify-content-lg-end"
             >
               <div
                 class="d-flex flex-column items-center"
@@ -233,9 +234,9 @@
     <section class="option py-5 mt-3">
       <div class="container">
         <div
-          class="row align-items-start justify-content-center justify-content-md-between"
+          class="row align-items-start justify-content-center justify-content-lg-between"
         >
-          <div class="col-12 col-md-6 col-lg-5">
+          <div class="col-12 col-lg-6 col-lg-5">
             <h1 class="text-white">Your Opinion Matters</h1>
             <p style="color: var(--seconday-light-gray)">
               We Are Building With You In Mind. Let Us Know What Features You
@@ -255,7 +256,7 @@
               <p style="color: var(--dark-gray)">
                 Share What Would Help You As A Renter
               </p>
-              <form action="" id="lead_capture_form" class="text-start mt-5">
+              <form action="" id="lead_capture_form" class="text-start mt-5" onsubmit="return validateForm()">
                 <div class="mb-3">
                   <label for="user_name" class="form-label">Name</label>
                   <input
@@ -265,6 +266,7 @@
                     value=""
                     placeholder="John Doe"
                   />
+                  <p id="nameError" class="error"></p>
                 </div>
                 <div class="mb-3">
                   <label for="email" class="form-label">Email Address</label>
@@ -275,9 +277,10 @@
                     value=""
                     placeholder="Johndoe@email.com"
                   />
+                  <p id="emailError" class="error"></p>
                 </div>
                 <div class="mb-3">
-                  <label for="email" class="form-label">Request</label>
+                  <label for="request" class="form-label">Request</label>
                   <textarea
                     name="request"
                     id="request"
@@ -285,6 +288,7 @@
                     style="min-height: 250px"
                     placeholder="Please Type In Your Idea Here"
                   ></textarea>
+                  <p id="requestError" class="error"></p>
                 </div>
                 <input
                   type="submit"
@@ -314,23 +318,21 @@
               >Don't miss out on exciting updates and exclusive offers from us.
               Stay connected to us.</span
             >
-            <form id="email_address_form">
-              <div
-                class="d-flex flex-wrap flex-md-nowrap flex-col flex-md-row align-items-center justify-content-start mx-auto my-5"
-                style="max-width: 620px"
-              >
+            <form id="newsletter_form" onsubmit="return validateNewsletterForm()">
+              <div class="d-flex flex-wrap flex-lg-nowrap flex-col flex-lg-row align-items-center justify-content-start mx-auto my-5" style="max-width: 620px">
                 <input
                   type="email"
                   name="email"
-                  id="email_address"
-                  class="me-md-2 me-0 w-100 flex-md-1"
+                  id="newsletter_email"
+                  class="me-lg-2 me-0 w-100 flex-lg-1"
                   placeholder="Enter Your Email Address"
                 />
                 <input
                   type="submit"
                   value="Connect With Us"
-                  class="w-100 w-md-auto mt-3 mt-md-0"
+                  class="w-100 w-lg-auto mt-3 mt-lg-0"
                 />
+                <p id="newsletterEmailError" class="error"></p>
               </div>
             </form>
 
