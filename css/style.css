@@ -6,18 +6,37 @@
   user-select: none;
 }
 :root {
-  
+  --black: #0D0D0D;
+  --light-pink: #F8DCFF;
+  --light-sky: #DBF4FF;
+  --light-green: #ECFFDC;
+  --light-gray: #CDCDCD;
+  --light-black: #C6C6C6;
+  --blue: #1551B2;
+  --dark-gray: #6E6E6E;
+  --seconday-light-gray: #A7A7A7;
 }
 @font-face {
-  font-family: "Avenir";
-  src: url("/font/Avenir\ Next.ttf");
+  font-family: "Avenir-thin";
+  src: url("/font/AvenirLTStd-Book.otf");
+}
+@font-face {
+  font-family: "Avenir-bold";
+  src: url("/font/AvenirLTStd-Black.otf");
+}
+@font-face {
+  font-family: "Avenir-normal";
+  src: url("/font/AvenirLTStd-Roman.otf");
 }
 * {
-  font-family: "Avenir";
+  font-family: "Avenir-normal";
 }
 html,
 body {
   overflow-x: none;
+}
+body{
+  background-color: var(--black);
 }
 a {
   color: inherit;
@@ -27,9 +46,177 @@ a:hover {
   text-decoration: none;
 }
 
+
+.header{
+  box-shadow: 0 0 1px 0 #D9D9D9;
+}
+.header img{
+  width: 50px;
+}
+
+
+
+.banner .banner-image{
+  max-width: 504px;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+  transition: all linear object-fit;
+  max-height: 732px;
+  animation: bannerimage-animate 26s infinite linear;
+}
+
+@keyframes bannerimage-animate {
+  from {
+    object-position: top;
+  }
+  to {
+    object-position: bottom; 
+  }
+}
+
+
+.banner h1{
+  font-family: "Avenir-thin";
+  font-weight: 500;
+}
+.banner span{
+  font-size: 30px;
+}
+.banner p{
+  font-size: 25px;
+}
+#email_address_form input[type="email"]{
+  background-color: transparent;
+  padding: 0.7rem 0.8rem;
+  border: 1px solid var(--light-black) !important;
+  border-radius: 3px;
+  color: var(--light-black) !important;
+  flex-grow: 1;
+}
+#email_address_form input[type="submit"]{
+  background-color: var(--blue);
+  padding: 0.7rem 0.8rem;
+  border: 1px solid var(--blue);
+  border-radius: 3px;
+  color: white;
+}
+
+
+
+
+
+.process h2{
+  font-size: 1.7rem;
+}
+.button-container {
+  display: flex;
+  background-color: var(--light-sky);
+  max-width: 365px;
+  width: 100%;
+  padding: 7px;
+  border-radius: 4px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toggle-button {
+  background-color: transparent;
+  border: none;
+  color: var(--dark-gray);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 9px;
+  cursor: pointer;
+  width: 49%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  border-radius: 4px;
+  font-size: 18px;
+}
+
+.toggle-button.active {
+  background-color: white;
+  color: black;
+  font-weight: 800;
+}
+
+.gallery-item {
+  display: none;
+}
+
+.active {
+  display: flex !important;
+}
+.gallery .icon{
+  width: 70px; aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+.gallery .icon img{
+  aspect-ratio: 1/1; width: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.sub-heading{
+  position: relative;
+  padding-left: 30px;
+}
+.sub-heading::before{
+  width: 3px;
+  height: 70%;
+  content: "";
+  position: absolute;
+  top: 15%;
+  left: 0; right: auto;
+  background-color: white;
+}
+.option .form_cover{
+  max-width: 514px;
+  width: 100%;
+  background-color: white;
+  border-radius: 8px;
+  padding: 50px 20px;
+}
+.option .form_cover h4{
+  font-weight: 500;
+  font-family: "Avenir-bold";
+}
+
+
+
+
+
+
+
 /* bootstrap breakpoints media queries */
 @media screen and (min-width: 576px){}
-@media screen and (min-width: 768px){}
+@media screen and (min-width: 768px){
+  .w-md-auto{
+    width: auto !important;
+  }
+  .process h2{
+    font-size: 2.3rem;
+  }
+}
 @media screen and (min-width: 992px){}
-@media screen and (min-width: 1200px){}
+@media screen and (min-width: 1200px){
+  .process h2{
+    font-size: 2.8rem;
+  }
+}
 @media screen and (min-width: 1400px){}
