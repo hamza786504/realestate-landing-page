@@ -26,7 +26,7 @@
     <title>Home - Real Estate Landing page</title>
   </head>
 
-  <body>
+  <body style="position: relative;">
     <header class="header py-3">
       <div class="container">
         <div class="row">
@@ -51,7 +51,10 @@
             </p>
             <div class="row">
               <div class="col-12 col-lg-10">
-                <form id="email_address_form"  onsubmit="return validateBannerForm()">
+                <form
+                  id="email_address_form"
+                  onsubmit="return validateBannerForm()"
+                >
                   <div
                     class="d-flex flex-wrap flex-lg-nowrap flex-col flex-lg-row align-items-center justify-content-start"
                   >
@@ -63,9 +66,9 @@
                       placeholder="Enter Your Email Address"
                     />
                     <input
-                    type="submit"
-                    value="Join The Waitlist"
-                    class="w-100 w-lg-auto mt-3 mt-lg-0"
+                      type="submit"
+                      value="Join The Waitlist"
+                      class="w-100 w-lg-auto mt-3 mt-lg-0"
                     />
                   </div>
                   <p id="bannerEmailError" class="error"></p>
@@ -256,7 +259,12 @@
               <p style="color: var(--dark-gray)">
                 Share What Would Help You As A Renter
               </p>
-              <form action="" id="lead_capture_form" class="text-start mt-5" onsubmit="return validateForm()">
+              <form
+                action=""
+                id="lead_capture_form"
+                class="text-start mt-5"
+                onsubmit="return validateForm()"
+              >
                 <div class="mb-3">
                   <label for="user_name" class="form-label">Name</label>
                   <input
@@ -318,8 +326,14 @@
               >Don't miss out on exciting updates and exclusive offers from us.
               Stay connected to us.</span
             >
-            <form id="newsletter_form" onsubmit="return validateNewsletterForm()">
-              <div class="d-flex flex-wrap flex-lg-nowrap flex-col flex-lg-row align-items-center justify-content-start mx-auto my-5" style="max-width: 620px">
+            <form
+              id="newsletter_form"
+              onsubmit="return validateNewsletterForm()"
+            >
+              <div
+                class="d-flex flex-wrap flex-lg-nowrap flex-col flex-lg-row align-items-center justify-content-start mx-auto my-5"
+                style="max-width: 620px"
+              >
                 <input
                   type="email"
                   name="email"
@@ -410,13 +424,14 @@
       </div>
     </section>
 
-
     <footer class="footer py-3">
       <div class="container">
         <div class="row">
           <div class="col-12 text-center">
             <ul class="menu ps-0 justify-content-center d-flex flex-wrap">
-              <li><a href="/" class="text-white">Copyright © 247perty 2023</a></li>
+              <li>
+                <a href="/" class="text-white">Copyright © 247perty 2023</a>
+              </li>
               <li><a href="/" class="text-white">Terms Of Service</a></li>
               <li><a href="/" class="text-white">Privacy Policy</a></li>
               <li><a href="/" class="text-white">Contact Us</a></li>
@@ -425,6 +440,25 @@
         </div>
       </div>
     </footer>
+
+    <div
+      id="toastContainer"
+      class="toast position-fixed" style="top: 10px; right: 10px;"
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="true"
+    >
+      <div class="toast-header">
+        <strong class="me-auto toast-title"></strong>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="toast"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="toast-body text-white"></div>
+    </div>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"
