@@ -51,28 +51,17 @@
             </p>
             <div class="row">
               <div class="col-12 col-lg-10">
-                <form
-                  id="email_address_form"
-                  onsubmit="return validateBannerForm()"
-                >
-                  <div
-                    class="d-flex flex-wrap flex-lg-nowrap flex-col flex-lg-row align-items-center justify-content-start"
-                  >
-                    <input
-                      type="email"
-                      name="email"
-                      id="banner_email"
-                      class="me-lg-2 me-0 w-100 flex-lg-1"
-                      placeholder="Enter Your Email Address"
-                    />
-                    <input
-                      type="submit"
-                      value="Join The Waitlist"
-                      class="w-100 w-lg-auto mt-3 mt-lg-0"
-                    />
-                  </div>
-                  <p id="bannerEmailError" class="error"></p>
-                </form>
+<div class="form-container" id="formContainer3">
+  <form id="email_address_form" onsubmit="return validateBannerForm()">
+      <div class="d-flex flex-wrap flex-lg-nowrap flex-col flex-lg-row align-items-center justify-content-start">
+          <input type="email" name="email" id="banner_email" class="me-lg-2 me-0 w-100 flex-lg-1" placeholder="Enter Your Email Address">
+          <input type="submit" value="Join The Waitlist" class="w-100 w-lg-auto mt-3 mt-lg-0">
+      </div>
+      <p id="bannerEmailError" class="error"></p>
+  </form>
+  <!-- Container for Form 3 Messages -->
+  <div class="form-message"></div>
+</div>
               </div>
             </div>
           </div>
@@ -259,50 +248,28 @@
               <p style="color: var(--dark-gray)">
                 Share What Would Help You As A Renter
               </p>
-              <form
-                action=""
-                id="lead_capture_form"
-                class="text-start mt-5"
-                onsubmit="return validateForm()"
-              >
-                <div class="mb-3">
-                  <label for="user_name" class="form-label">Name</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="user_name"
-                    value=""
-                    placeholder="John Doe"
-                  />
-                  <p id="nameError" class="error"></p>
-                </div>
-                <div class="mb-3">
-                  <label for="email" class="form-label">Email Address</label>
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="email"
-                    value=""
-                    placeholder="Johndoe@email.com"
-                  />
-                  <p id="emailError" class="error"></p>
-                </div>
-                <div class="mb-3">
-                  <label for="request" class="form-label">Request</label>
-                  <textarea
-                    name="request"
-                    id="request"
-                    class="form-control"
-                    style="min-height: 250px"
-                    placeholder="Please Type In Your Idea Here"
-                  ></textarea>
-                  <p id="requestError" class="error"></p>
-                </div>
-                <input
-                  type="submit"
-                  class="btn btn-primary w-100 text-white py-3"
-                  value="Send"
-                />
+              <div class="form-container" id="formContainer2">
+                <form action="" id="lead_capture_form" class="text-start mt-5" onsubmit="return validateForm()">
+                    <div class="mb-3">
+                        <label for="user_name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="user_name" value="" placeholder="John Doe">
+                        <p id="nameError" class="error"></p>
+                      </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="email" value="" placeholder="Johndoe@email.com">
+                        <p id="emailError" class="error"></p>
+                      </div>
+                    <div class="mb-3">
+                        <label for="request" class="form-label">Request</label>
+                        <textarea name="request" id="request" class="form-control" style="min-height: 250px" placeholder="Please Type In Your Idea Here"></textarea>
+                        <p id="requestError" class="error"></p>
+                      </div>
+                    <input type="submit" class="btn btn-primary w-100 text-white py-3" value="Send">
+                </form>
+                <!-- Container for Form 2 Messages -->
+                <div class="form-message"></div>
+            </div>
               </form>
             </div>
           </div>
@@ -326,30 +293,17 @@
               >Don't miss out on exciting updates and exclusive offers from us.
               Stay connected to us.</span
             >
-            <form
-              id="newsletter_form"
-              onsubmit="return validateNewsletterForm()"
-            >
-              <div
-                class="d-flex flex-wrap flex-lg-nowrap flex-col flex-lg-row align-items-center justify-content-start mx-auto my-5"
-                style="max-width: 620px"
-              >
-                <input
-                  type="email"
-                  name="email"
-                  id="newsletter_email"
-                  class="me-lg-2 me-0 w-100 flex-lg-1"
-                  placeholder="Enter Your Email Address"
-                />
-                <input
-                  type="submit"
-                  value="Connect With Us"
-                  class="w-100 w-lg-auto mt-3 mt-lg-0"
-                />
-                <p id="newsletterEmailError" class="error"></p>
-              </div>
-            </form>
-
+            <div class="form-container" id="formContainer1">
+              <form id="newsletter_form" onsubmit="return validateNewsletterForm()">
+                  <div class="d-flex flex-wrap flex-lg-nowrap flex-col flex-lg-row align-items-center justify-content-start mx-auto mt-5 mb-2" style="max-width: 620px">
+                      <input type="email" name="email" id="newsletter_email" class="me-lg-2 me-0 w-100 flex-lg-1" placeholder="Enter Your Email Address">
+                      <input type="submit" value="Connect With Us" class="w-100 w-lg-auto mt-3 mt-lg-0">
+                    </div>
+                    <p id="newsletterEmailError" class="error"></p>
+              </form>
+              <!-- Container for Form 1 Messages -->
+              <div class="form-message"></div>
+          </div>
             <br />
             <br />
             <h2 class="text-white text-center">We Are Available In...</h2>
